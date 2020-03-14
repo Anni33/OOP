@@ -6,7 +6,6 @@ int main()
    string ifile;
    cout << "Vvedite im`a faila glia sortirovki:";
    cin >> ifile;
-   // сконструировать объект класса ifstream для ввода из файла
    ifstream infile( ifile.c_str() );
    if ( ! infile ) {
       cerr << "oshibka: ne mogu otkrit vhodnoi fail:" << ifile << endl;
@@ -14,7 +13,6 @@ int main()
       return -1;
    }
    string ofile = ifile + ".sort";
-   // сконструировать объект класса ofstream для вывода в файл
    ofstream outfile( ofile.c_str() );
    if ( ! outfile) {
       cerr <<"oshibka: ne mogu otkrit vhodnoi fail:" << ofile <<endl;
